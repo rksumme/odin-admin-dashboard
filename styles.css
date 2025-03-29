@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
     --background-clr: #efe9e1;
     --darker-background: #cdbcab;
@@ -12,6 +14,12 @@ html, body {
     padding: 0;
     box-sizing: border-box;
     height: 100%;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+}
+
+img {
+    filter: invert(100%);
 }
 
 .outer-container {
@@ -20,19 +28,57 @@ html, body {
     width: auto;
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 5fr;
+    grid-template-rows: 2fr 7fr;
 }
 
+/* Sidebar formatting */
 .sidebar {
     background-color: var(--main-color);
     grid-row: 1 / -1;
+    display: grid;
+    grid-template-rows: 1fr 5fr 5fr;
+    gap: 1rem;
 }
 
+.sidebar > * {
+    color: var(--background-clr);
+    list-style: none;
+}
+
+.sidebar-header {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.sidebar-title {
+    padding: 0.75rem;
+    font-size: 2rem;
+}
+
+.choices, .settings {
+    padding-left: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+    grid-template-rows: repeat(10, 1fr);
+    gap: 1.8rem;
+}
+
+.choices > .text , .settings > .text{
+    font-size: 1.5rem;
+    padding-left: 1 rem;
+}
+
+
+/* Header formatting */
 .header {
     background-color: var(--background-clr);
     grid-column: 2 / -1;
 }
 
+
+/* Cards formatting */
 .cards-container {
     background-color: var(--darker-background);
     grid-area: 2 / 2 / -1 / -1;
