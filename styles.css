@@ -175,6 +175,8 @@ p.heading {
 
 .projects {
     grid-row: 1 / -1;
+    display: grid;
+    grid-template-rows: 1fr 10fr;
 }
 
 .trend {
@@ -233,4 +235,50 @@ p.heading {
 .handle {
     font-weight: bold;
     font-size: 1.1rem;
+}
+
+.card {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--background-clr);
+    max-height: 300px;
+    padding: 1rem;
+    border-radius: 15px;
+}
+
+.card-title {
+    grid-column: 1 / -1;
+    margin: 0;
+    padding: 0;
+    align-self: end;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+.paragraph {
+    grid-row: 2 / 3;
+    grid-column: 1 / -1;
+    font-size: 1.3rem;
+}
+
+.icon-list > img {
+    width: 2rem;
+    padding: 0 1rem;
+}
+
+.icon-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 1fr;
+    grid-column: 2 / -1;
+    align-self: end;
+}
+
+.display-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(250px, 300px));
+    gap: 2rem;
+    padding: 0 2rem;
 }
