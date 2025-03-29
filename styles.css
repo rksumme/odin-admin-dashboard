@@ -1,0 +1,39 @@
+:root {
+    --background-clr: #efe9e1;
+    --darker-background: #cdbcab;
+    --main-color: #a67d44;
+    --accent-color: #5d1c34;
+    --light-accent-clr: #899481;
+    --text-color: #11100f;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.outer-container {
+    background-color: aquamarine;
+    height: 100%;
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 5fr;
+}
+
+.sidebar {
+    background-color: var(--main-color);
+    grid-row: 1 / -1;
+}
+
+.header {
+    background-color: var(--background-clr);
+    grid-column: 2 / -1;
+}
+
+.cards-container {
+    background-color: var(--darker-background);
+    grid-area: 2 / 2 / -1 / -1;
+}
