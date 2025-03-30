@@ -245,6 +245,7 @@ p.heading {
     max-height: 300px;
     padding: 1rem;
     border-radius: 15px;
+    border-left: 8px solid var(--accent-color)
 }
 
 .card-title {
